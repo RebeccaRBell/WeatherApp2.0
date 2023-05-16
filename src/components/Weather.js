@@ -46,8 +46,7 @@ export default function Weather() {
     return (
         <div>
             <div className="container box whole-app">
-        <div className="row row-one">
-          <div className="col-lg-12">
+        <div className="row-one">
           <form className="city-search" onSubmit={searchCity}>
             <input
               type="input"
@@ -57,9 +56,9 @@ export default function Weather() {
             />
             <input type="button" id="submit-button" value="Search" />
             </form>
-        </div>
-        <div className="row row-two">
-          <div className="col-lg-8 column-one">
+            </div>
+        <div className="row-two">
+          <div className="column-one">
             <h1 className="city" id="city">
               {searched}
             </h1>
@@ -79,22 +78,20 @@ export default function Weather() {
                 </li>
               </ul>
               </div>
-              <div className="col-lg-4 column-two">
+              <div className="column-two">
                 <Forecast city={searched} latitude={lat} longitude={lon}/>
               </div>
-          </div>
           </div>
           </div>
       <footer>
          <div className="footer-info">
           <div className="footer1"><a
             href="https://github.com/RebRomBell?tab=repositories"
-            className="footer-info"
             rel="noreferer"
           >
             Open-source code
           </a>
-          by Rebecca Bell</div>
+           {' '}by Rebecca Bell</div>
           <div id="current-time" className="footer2">Last Updated:<CurrentTime date={(new Date(currentTime))} /></div>
           </div>
       </footer>

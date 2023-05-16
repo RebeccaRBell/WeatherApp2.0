@@ -66,7 +66,7 @@ setMaxtemp5(Math.round(response.data.daily[4].temp.max));
  
     return(
         <div className="forecast">
-        <div className="forecast-one">
+                  <div className="forecast-one">
                   <p>{day1}</p>
                   <img src={icon1}  alt="weather icon"></img>
                    <p><span className="max-temp">{maxtemp1}°</span><br /><span className="min-temp">{mintemp1}°</span></p>

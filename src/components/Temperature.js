@@ -1,58 +1,56 @@
 import React, { useState } from "react";
 
 export default function Temperature(props) {
-    const [unit, setUnit] = useState("celcius");
+	const [unit, setUnit] = useState("celcius");
 
-    function changeToF(event) {
-        event.preventDefault();
-        setUnit("fahrenheit");
+	function changeToF(event) {
+		event.preventDefault();
+		setUnit("fahrenheit");
+	}
 
-    }
- 
-    function changeToC(event) {
-        event.preventDefault();
-        setUnit("celcius");
-    }
+	function changeToC(event) {
+		event.preventDefault();
+		setUnit("celcius");
+	}
 
-    if (unit === "celcius") {
-    return (
-        <div>
-        <div
-              className="btn-group btn-group-toggle buttons"
-              data-toggle="buttons"
-            >
-              <label className="btn btn-secondary" id="temp-button1" onClick={changeToC}>
-                <input type="radio" name="options" id="option1"  onClick={changeToC}/> °C
-              </label>
-              <label className="btn btn-secondary" id="temp-button2" onClick={changeToF}>
-                <input type="radio" name="options" id="option2" onClick={changeToF} /> °F
-              </label>
-            </div>
-            <div className="temp-today">
-              <p>{props.temp}<span className="degree">°</span></p>
-            </div>
-            </div>
-    );
-    } else {
-        let fahrenheit = Math.round((props.temp * 9 / 5) + 32);
-    return (
-        <div>
-      <div
-              className="btn-group btn-group-toggle buttons"
-              data-toggle="buttons"
-            >
-              <label className="btn btn-secondary" id="temp-button1" onClick={changeToC}>
-                <input type="radio" name="options" id="option1"  onClick=
-                {changeToC}/> °C
-              </label>
-              <label className="btn btn-secondary" id="temp-button2" onClick={changeToF}>
-                <input type="radio" name="options" id="option2" onClick={changeToF} /> °F
-              </label>
-            </div>
-            <div className="temp-today">
-              <p>{fahrenheit}<span className="degree">°</span></p>
-            </div>
-            </div>
-    );
-}
+	if (unit === "celcius") {
+		return (
+			<div>
+				<div className="buttons">
+					<div onClick={changeToC} id="temp-button1">
+						°C
+					</div>
+					<div onClick={changeToF} id="temp-button2">
+						°F
+					</div>
+				</div>
+				<div className="temp-today">
+					<p>
+						{props.temp}
+						<span className="degree">°</span>
+					</p>
+				</div>
+			</div>
+		);
+	} else {
+		let fahrenheit = Math.round((props.temp * 9) / 5 + 32);
+		return (
+			<div className="temp-button-cont">
+				<div className="buttons">
+					<div onClick={changeToC} id="temp-button1">
+						°C
+					</div>
+					<div onClick={changeToF} id="temp-button2">
+						°F
+					</div>
+				</div>
+				<div className="temp-today">
+					<p>
+						{fahrenheit}
+						<span className="degree">°</span>
+					</p>
+				</div>
+			</div>
+		);
+	}
 }
