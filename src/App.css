@@ -328,7 +328,6 @@ img {
   
     #submit-button {
       width: 20%;
-      margin-left: 10px;
       height: 100%;
       font-size: 13px;
       border: 1.5px solid rgba(199, 64, 64, 0.3);
@@ -337,7 +336,10 @@ img {
     }
   
     #submit-button:hover {
-      display: none;
+        background-color: rgba(199, 64, 64, 0.823);
+          color: white;
+          opacity: 0.9;
+          cursor: pointer;
     }
   
     .column-one {
@@ -381,18 +383,8 @@ img {
       padding: 10px;
       padding-top: 30px;
     }
-    #temp-button1,
-    #temp-button2 {
-      width: 15%;
-      text-align: center;
-      color: rgb(92, 100, 95);
-    }
-
-    #temp-button1:hover,
-    #temp-button2:hover {
-      display: none;
-    }
   
+    
     .temp-today {
       width: 100%;
     }
