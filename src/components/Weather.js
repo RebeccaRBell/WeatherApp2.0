@@ -9,9 +9,9 @@ import Forecast from "./Forecast";
 
 export default function Weather() {
    
-    const [city, setCity] = useState("London");
-    const [searched, setSearched] = useState("London");
-    const [temp, setTemp] = useState("0");
+    const [city, setCity] = useState("Glasgow");
+    const [searched, setSearched] = useState("Glasgow");
+    const [temp, setTemp] = useState("13");
     const [description, setDescription] = useState ("Cloudy");
     const [humidity, setHumidity] = useState("50");
     const [wind, setWind] = useState("20");
